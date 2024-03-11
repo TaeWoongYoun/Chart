@@ -11,3 +11,9 @@
 .bar {
     fill: steelblue;
 }
+
+.chart2{
+    width: 450px;
+    height: 300px;
+    border: 1px black solid;
+}

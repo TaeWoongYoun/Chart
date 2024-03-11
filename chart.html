@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>SVG Bar Chart</title>
+<link rel="stylesheet" href="chart.css">
+<script  src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 <body>
 <svg class="chart">
@@ -39,5 +41,35 @@
     <rect class="bar" x="200" y="80" width="50" height="100"></rect>
     <rect class="bar" x="300" y="150" width="50" height="30"></rect>
 </svg>
+
+<svg class="chart2">
+    <!-- X축 -->
+    <line x1="50" y1="280" x2="400" y2="280" stroke="#000" />
+    <!-- Y축 -->
+    <line x1="50" y1="280" x2="50" y2="30" stroke="#000" />
+
+    <!-- X축 -->
+    <text x="90" y="295">오전 10시</text>
+    <text x="193" y="295">오후 2시</text>
+    <text x="293" y="295">오후 4시</text>
+
+    <!-- Y축 -->
+    <text x="25" y="265">50</text>
+    <text x="20" y="240">100</text>
+    <text x="20" y="215">150</text>
+    <text x="20" y="190">200</text>
+    <text x="20" y="165">250</text>
+    <text x="20" y="140">300</text>
+    <text x="20" y="115">350</text>
+    <text x="20" y="90">400</text>
+    <text x="20" y="65">450</text>
+    <text x="20" y="40">500</text>
+
+    <!-- 데이터 바 -->
+    <rect class="bar" x="100" y="130" width="50" height="150"></rect>
+    <rect class="bar" x="200" y="50" width="50" height="230"></rect>
+    <rect class="bar" x="300" y="200" width="50" height="80"></rect>
+</svg>
+<script src="chart.js"></script>
 </body>
 </html>
