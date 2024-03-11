@@ -1,0 +1,13 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.chart {
+    width: 450px;
+    height: 200px;
+    border: 1px solid #ccc;
+}
+.bar {
+    fill: steelblue;
+}
