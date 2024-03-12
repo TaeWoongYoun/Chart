@@ -10,6 +10,7 @@
 }
 .bar {
     fill: steelblue;
+    transition: height 0.8s ease-in;
 }
 
 .chart2{
