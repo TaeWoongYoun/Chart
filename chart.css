@@ -13,8 +13,14 @@
 }
 
 .chart2{
+    /* transform: rotate(180deg); */
     margin: 50px;
     width: 450px;
     height: 550px;
     border: 1px black solid;
 }
+
+/* .chart2 text {
+    transform: rotate(180deg);
+    transform-origin: 50% 50%;
+} */
