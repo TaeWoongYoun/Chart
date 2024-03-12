@@ -11,8 +11,8 @@ function updateChart(day) {
     const selectedData = data.find(item => item.day === day);
 
     if (selectedData) {
-        document.getElementById("bar1").setAttribute("height", selectedData.visitor["오전 10시"]);
-        document.getElementById("bar2").setAttribute("height", selectedData.visitor["오후 2시"]);
-        document.getElementById("bar3").setAttribute("height", selectedData.visitor["오후 4시"]);
+        $("#bar1").attr("height", selectedData.visitor["오전 10시"]);
+        $("#bar2").attr("height", selectedData.visitor["오후 2시"]);
+        $("#bar3").attr("height", selectedData.visitor["오후 4시"]);
     }
 }
