@@ -7,6 +7,7 @@ const data = [
     { "day": "토", "visitor": { "오전 10시": 230, "오후 2시": 670, "오후 4시": 280 } },
     { "day": "일", "visitor": { "오전 10시": 220, "오후 2시": 270, "오후 4시": 280 } }
 ];
+
 function updateChart(day) {
     const selectedData = data.find(item => item.day === day);
 

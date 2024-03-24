@@ -3,25 +3,34 @@
     margin: 0;
 }
 
-.chart {
-    width: 450px;
-    height: 200px;
-    border: 1px solid #ccc;
-}
 .bar {
     fill: steelblue;
     transition: height 0.8s ease-in;
 }
 
-.chart2{
-    /* transform: rotate(180deg); */
-    margin: 50px;
+.chart{
     width: 450px;
     height: 550px;
     border: 1px black solid;
 }
 
-/* .chart2 text {
-    transform: rotate(180deg);
-    transform-origin: 50% 50%;
-} */
+.chartH{
+    width: 450px;
+    height: 600px;
+    margin: 10px;
+}
+
+.btnH{
+    width: 450px;    
+    display: flex;
+    justify-content: space-around;
+}
+
+.chartH button{
+    width: 50px;
+    height: 30px;
+    background-color: cornflowerblue;
+    color: aliceblue;
+    border-radius: 10px;
+    border: none;
+}
