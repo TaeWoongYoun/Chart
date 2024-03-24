@@ -20,7 +20,22 @@
     margin: 10px;
 }
 
+.league{
+    width: 450px;
+    height: 50px;
+    display: flex;
+}
+
+.league > div{
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: antiquewhite;
+}
+
 .btnH{
+    margin-top: 10px;
     width: 450px;    
     display: flex;
     justify-content: space-around;
