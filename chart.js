@@ -16,9 +16,14 @@ function changeLeague(league) {
     $('.league div').removeClass('selectedLeague');
     const selectedDiv = $('.league div').eq(Object.keys(chartData).indexOf(league));
     selectedDiv.addClass('selectedLeague');
-    if (league === "나이트리그") { setText("오후 6시", "오후 10시", ""); }
-    else if (league === "새벽리그") { setText("오전 4시", "오전 7시", ""); }
-    else { setText("오전 10시", "오후 2시", "오후 4시"); }
+    if (league === "나이트리그") {
+        setText("오후 6시", "오후 10시", "");
+    } else if (league === "새벽리그") {
+        setText("오전 4시", "오전 7시", "");
+        $('#bar3').attr("height", 0); // 새벽리그로 변경할 때 오후 4시에 해당하는 막대 그래프의 높이를 0으로 설정
+    } else {
+        setText("오전 10시", "오후 2시", "오후 4시");
+    }
     updateChart("월");
 }
 
