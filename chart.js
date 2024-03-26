@@ -7,23 +7,19 @@ const chartData = {
 function updateChart(day) {
     const selectedLeague = $('.selectedLeague').text().trim();
     const selectedData = chartData[selectedLeague][day];
-    $('.bar').each(function(i) {
-        $(this).attr("height", selectedData[i]);
-    });
+    $('.bar').each((i, element) => $(element).attr("height", selectedData[i]));
 }
 
 function changeLeague(league) {
-    $('.league div').removeClass('selectedLeague');
-    const selectedDiv = $('.league div').eq(Object.keys(chartData).indexOf(league));
-    selectedDiv.addClass('selectedLeague');
-    if (league === "나이트리그") {
-        setText("오후 6시", "오후 10시", "");
-    } else if (league === "새벽리그") {
-        setText("오전 4시", "오전 7시", "");
-        $('#bar3').attr("height", 0); // 새벽리그로 변경할 때 오후 4시에 해당하는 막대 그래프의 높이를 0으로 설정
-    } else {
-        setText("오전 10시", "오후 2시", "오후 4시");
-    }
+    const index = ["나이트리그", "새벽리그", "오후리그"].indexOf(league);
+    $('.league div').removeClass('selectedLeague').eq(index).addClass('selectedLeague');
+    const labels = {
+        "나이트리그": ["오후 6시", "오후 10시", ""],
+        "새벽리그": ["오전 4시", "오전 7시", ""],
+        "오후리그": ["오전 10시", "오후 2시", "오후 4시"]
+    };
+    setText(labels[league][0], labels[league][1], labels[league][2]);
+    if (league === "새벽리그") $('#bar3').attr("height", 0);
     updateChart("월");
 }
 
